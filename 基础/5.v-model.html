@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+
+        <div id="app-6">
+          <p>{{message}}</p>
+          <input v-model="message">
+          <button v-on:click="alert">弹出框</button>
+        </div>
+        
+        <script type="text/javascript">
+          var app6 = new Vue({
+            el: '#app-6',
+            data: {
+              message: 'Hello Vue!'
+            },
+            methods: {
+              alert: function() {
+                alert(this.message)
+              }
+            }
+          })
+        </script>
+    </body>
+</html>

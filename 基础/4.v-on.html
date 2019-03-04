@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app-5">
+          <p>{{ message }}</p>
+          <input type="text" v-bind:value="message">
+          <button v-on:click="reverseMessage">逆转消息</button>
+          <button v-on:click="alert">弹出框</button>
+        </div>
+        
+        <script type="text/javascript">
+          var app5 = new Vue({
+            el: '#app-5',
+            data: {
+              message: 'Hello Vue.js!'
+            },
+            methods: {
+              reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+              },
+              alert: function() {
+                alert(this.message)
+              }
+            }
+          })
+        </script>
+    </body>
+</html>
